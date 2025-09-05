@@ -91,7 +91,60 @@
       .grid2{grid-template-columns:1fr}
       .calc-grid{grid-template-columns:1fr}
     }
-  </style>
+  
+/* ---------- Responsive Adjustments ---------- */
+input, select, button {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  header, .card, .grid, .row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .tabs {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .tab {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  .btn {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  input, select {
+    width: 100%;
+  }
+
+  canvas {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
+
+</style>
 </head>
 <body>
   <!-- Top header & toggle -->
